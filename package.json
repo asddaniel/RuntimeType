@@ -1,0 +1,14 @@
+{
+  "name": "runningtype",
+  "version": "1.0.0",
+  "description": "javascript data type during runtime",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Daniel Assani",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
