@@ -1,5 +1,5 @@
 {
-  "name": "runningtype",
+  "name": "runtimetype",
   "version": "1.0.0",
   "description": "javascript data type during runtime",
   "main": "index.js",

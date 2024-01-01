@@ -103,4 +103,4 @@ export const Type = function createTypedProxy(initialValue, errorCallback) {
     });
     return val;
 };
-export default getDataType
+//export default getDataType
