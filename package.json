@@ -1,6 +1,6 @@
 {
   "name": "@asddaniel/runtimetype",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/asddaniel/RuntimeType",
   "description": "javascript data type during runtime",
   "main": "dist/index.js",
