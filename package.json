@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "repository": "https://github.com/asddaniel/RuntimeType",
   "description": "javascript data type during runtime",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "src/TypeChecker.d.ts",
   "scripts": {
     "test": "test"
   },
