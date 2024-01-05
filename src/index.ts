@@ -46,10 +46,42 @@ export const getDataType = (data: any): string | ObjectType => {
     : type;
 };
 
-const isEqual = (object1: any, object2: any): boolean => {
-  // Utilisation de l'opérateur de comparaison directe
-  // Remplacement de la boucle manuelle de comparaison de caractères par une simple comparaison de chaînes avec JSON.stringify pour améliorer la lisibilité.
-  return JSON.stringify(object1) === JSON.stringify(object2);
+// Fonction de comparaison d'objets récursive
+const isEqual = (object1, object2) => {
+  // Vérification si les deux objets sont strictement égaux
+  if (object1 === object2) {
+    return true;
+  }
+
+  // Vérification si l'un des objets n'est pas de type "object" ou est null
+  if (
+    typeof object1 !== "object" ||
+    object1 === null ||
+    typeof object2 !== "object" ||
+    object2 === null
+  ) {
+    return false;
+  }
+
+  // Récupération des clés des objets
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+
+  // Vérification si le nombre de clés est le même
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  // Vérification de chaque propriété à l'aide d'une boucle
+  for (const key of keys1) {
+    // Vérification si la clé est présente dans les deux objets et si les valeurs correspondantes sont égales
+    if (!keys2.includes(key) || object1[key] !== object2[key]) {
+      return false;
+    }
+  }
+
+  // Si toutes les vérifications réussissent, les objets sont considérés comme égaux
+  return true;
 };
 
 export const Type = <T>(initialValue: T, options?: TypeOptions): T => {
