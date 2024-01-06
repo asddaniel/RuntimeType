@@ -4,6 +4,12 @@
 export type ObjectType = {
     [key: string]: any;
   };
+
+  export type TypeOptions = {
+    errorCallback?: (expectedType: string, receivedType: string) => void;
+    immutable?: boolean;
+    allowOptional?: boolean;
+  };
   
   // Déclaration pour la fonction getObjectTypes
   export function getObjectTypes(obj: ObjectType): ObjectType;
